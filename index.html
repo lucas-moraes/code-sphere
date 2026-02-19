@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSphere 3D | Terminal Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #0d0208; font-family: 'Courier New', Courier, monospace; }
+        
+        /* CRT Scanline Effect */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%,
+                rgba(0, 0, 0, 0.25) 50%
+            ), linear-gradient(
+                90deg,
+                rgba(255, 0, 0, 0.06),
+                rgba(0, 255, 0, 0.02),
+                rgba(0, 0, 255, 0.06)
+            );
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .force-graph-container .scene-tooltip {
+            background: rgba(0, 5, 0, 0.95) !important;
+            border: 1px solid #00ff41 !important;
+            border-radius: 0px !important;
+            padding: 8px !important;
+            color: #00ff41 !important;
+            font-family: 'Courier New', monospace !important;
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+        }
+
+        /* Retro scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0d0208; }
+        ::-webkit-scrollbar-thumb { background: #003b00; border-radius: 0px; }
+        ::-webkit-scrollbar-thumb:hover { background: #008f11; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "three": "https://esm.sh/three@^0.182.0",
+    "react-force-graph-3d": "https://esm.sh/react-force-graph-3d@^1.29.1",
+    "yargs": "https://esm.sh/yargs@^18.0.0",
+    "yargs/": "https://esm.sh/yargs@^18.0.0/",
+    "picocolors": "https://esm.sh/picocolors@^1.1.1",
+    "process": "https://esm.sh/process@^0.11.10",
+    "fs": "https://esm.sh/fs@^0.0.1-security",
+    "path": "https://esm.sh/path@^0.12.7",
+    "glob": "https://esm.sh/glob@^13.0.3",
+    "express": "https://esm.sh/express@^5.2.1",
+    "open": "https://esm.sh/open@^11.0.0",
+    "url": "https://esm.sh/url@^0.11.4",
+    "d3-force": "https://esm.sh/d3-force@^3.0.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

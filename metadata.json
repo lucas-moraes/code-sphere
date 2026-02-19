@@ -1,0 +1,6 @@
+
+{
+  "name": "CodeSphere 3D Visualizer",
+  "description": "A high-performance 3D code analysis tool that visualizes function call graphs and project structures using Three.js and force-directed layouts.",
+  "requestFramePermissions": []
+}

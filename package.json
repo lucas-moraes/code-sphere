@@ -1,0 +1,37 @@
+{
+  "name": "codesphere-3d",
+  "version": "1.0.0",
+  "description": "3D Code Call Graph Visualizer CLI",
+  "main": "cli.js",
+  "bin": {
+    "codesphere-3d": "cli.js"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "d3-force": "^3.0.0",
+    "express": "^4.18.2",
+    "glob": "^10.3.10",
+    "lucide-react": "^0.564.0",
+    "open": "^8.4.2",
+    "picocolors": "^1.0.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-force-graph-3d": "^1.29.1",
+    "three": "^0.182.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.182.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0"
+  }
+}
